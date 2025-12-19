@@ -24,11 +24,11 @@ const cardValue = [
 ]
 
 function App() {
-  const {cards, score, moves, handleCardClick, initializeGame, isGameComplete} = useGameLogic(cardValue);
+  const { cards, score, moves, handleCardClick, initializeGame, isGameComplete } = useGameLogic(cardValue);
 
-   return (
+  return (
     <div className="app">
-      <GameHeader  score={score} moves={moves} onReset={initializeGame}/>
+      <GameHeader score={score} moves={moves} onReset={initializeGame} />
       {isGameComplete && <winMessage moves={moves} />}
       <div className="cards-grid">
         {cards.map((card) => (
