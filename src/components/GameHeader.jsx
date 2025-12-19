@@ -1,5 +1,5 @@
 
-export const GameHeader = ({score, moves, onReset}) => {
+export const GameHeader = ({ score, moves, onReset }) => {
     return <div className="game-header">
         <h1>Memory Card Game </h1>
         <div className="stats">
