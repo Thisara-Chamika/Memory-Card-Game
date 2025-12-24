@@ -1,7 +1,7 @@
 import { Card } from "./components/Card"
 import { GameHeader } from "./components/GameHeader"
 import { useGameLogic } from "./hooks/useGameLogics"
-import { WinMessage } from "./components/WinMessage"
+import { VictoryMessage } from "./components/WinMessage"
 
 
 const cardValue = [
@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="app">
       <GameHeader score={score} moves={moves} onReset={initializeGame} />
-      {isGameComplete && <WinMessage moves={moves} />}
+      {isGameComplete && <VictoryMessage moves={moves} />}
       <div className="cards-grid">
         {cards.map((card) => (
           <Card card={card} onClick={handleCardClick} />
